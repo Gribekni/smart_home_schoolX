@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Умный дом для вашей семьи</title>
+    <link rel="stylesheet" href="mane_all.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/2005/2005324.png">
+</head>
+<body>
+<!-- Верхнее навигационное меню -->
+<nav>
+    <a href="temperature_sensor.html"><button class="nav-btn">Датчик температуры</button></a>
+    <a href="gas_sensor.html"><button class="nav-btn">Датчик газа</button></a>
+    <a href="cameras.html"><button class="nav-btn">Камеры</button></a>
+    <a href="climate_control.html"><button class="nav-btn">Климат-контроль</button></a>
+    <a href="light_one.html"><button class="nav-btn active">Свет</button></a>
+</nav>
+
+<!-- Основной контент -->
+<main class="content">
+    <div class="control-section">
+        <h2>Спальная комната:</h2>
+        <div class="control-item">
+            <span>Люстра</span>
+            <label class="switch">
+                <input type="checkbox" id="chandelier">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="control-item">
+            <span>Настольная лампа</span>
+            <label class="switch">
+                <input type="checkbox" id="desk-lamp">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+</main>
+
+<script src="two_mane.js"></script>
+</body>
+</html>

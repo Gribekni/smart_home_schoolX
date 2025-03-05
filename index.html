@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Умный дом для вашей семьи</title>
+    <link rel="stylesheet" href="mane.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/2005/2005324.png">
+</head>
+<body>
+<button id="theme-toggle" class="theme-toggle">Сменить тему</button>
+
+<div class="container">
+    <h1>Умный дом для вашей семьи</h1>
+
+    <div class="cards-container">
+        <a href="menu.html" class="card">
+            <div class="card-content" style="background-image: url('https://i.pinimg.com/474x/49/2d/c6/492dc68e43cc2d01793a4bb056226642.jpg')">
+                <img src="https://cdn-icons-png.flaticon.com/128/4407/4407903.png" alt="Датчики" class="icon">
+                <h2>Датчики</h2>
+            </div>
+        </a>
+
+        <a href="robot.html" class="card">
+            <div class="card-content" style="background-image: url('https://i.pinimg.com/474x/4b/7f/57/4b7f57ed84ca228069de1e2bb223a92e.jpg')">
+                <img src="https://cdn-icons-png.flaticon.com/128/5705/5705176.png" alt="Робот" class="icon">
+                <h2>Робот</h2>
+            </div>
+        </a>
+
+        <a href="help.html" class="card">
+            <div class="card-content" style="background-image: url('https://i.pinimg.com/originals/89/aa/bb/89aabbd76ebf4fea3fa7bdbff344c40d.webp')">
+                <img src="https://cdn-icons-png.flaticon.com/128/3728/3728607.png" alt="Поддержка" class="icon">
+                <h2>Поддержка</h2>
+            </div>
+        </a>
+    </div>
+</div>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    let currentTheme = 'default';
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('alternative-theme');
+    });
+</script>
+</body>
+</html>
