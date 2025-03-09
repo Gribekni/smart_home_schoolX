@@ -32,6 +32,32 @@ body {
     transition: all 0.3s ease;
 }
 
+
+
+button:hover{
+    background-color: #C58C6D;
+}
+
+
+
+
+/*Верхняя кнопка "Главное меню"*/
+.button_back{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.button_back_1{
+    background-color: #eecbba;
+    border: 1px solid #923535;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 20px;
+}
+
+
+
 .container {
     display: flex;
     max-width: 1200px;

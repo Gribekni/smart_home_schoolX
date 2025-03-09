@@ -273,3 +273,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+/*Меню входа*/
+// Valid credentials list
+const validCredentials = [
+    { username: 'команда', password: 'команда2' }
+];
+
+// DOM elements
+const loginForm = document.getElementById('loginForm');
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const errorMessage = document.getElementById('errorMessage');
+const numberErrorModal = document.getElementById('numberErrorModal');
+
+// Event listeners
+loginForm.addEventListener('submit', handleSubmit);
+usernameInput.addEventListener('input', handleUsernameInput);
+
+// Handle username input
+function handleUsernameInput(e) {
+    const value = e.target.value;
+
+    // Check for numbers in username
+    if (/\d/.test(value)) {
+        numberErrorModal.style.display = 'flex';
+        e.target.value = value.replace(/\d/g, '');
+    }
+}
+
+// Handle form submission
+function handleSubmit(e) {
+    e.preventDefault();
+
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+
+    // Validate credentials
+    const isValid = validCredentials.some(
+        cred => cred.username === username && cred.password === password
+    );
+
+    if (isValid) {
+        // Redirect to dashboard
+        window.location.href = 'selection.html';
+    } else {
+        // Show error message
+        errorMessage.textContent = 'Неверное имя пользователя или пароль';
+    }
+}
+
+// Close modal
+function closeModal() {
+    numberErrorModal.style.display = 'none';
+}
+
+
+
+
+
+
+
