@@ -20,9 +20,9 @@ client.onMessageArrived = (message) => {
         case 'smart-home/temperature':
             document.getElementById('temperature').innerText = `Температура: ${payload.value}°C`;
             break;
-        case 'smart-home/humidity':
-            document.getElementById('humidity').innerText = `Влажность: ${payload.value}%`;
-            break;
+       case 'smart-home/humidity':
+    document.getElementById('humidity-value').innerText = payload.value;
+    break;
         case 'smart-home/motion':
             document.getElementById('motion').innerText = `Движение: ${payload.value ? 'Обнаружено' : 'Нет'}`;
             break;
